@@ -23,7 +23,7 @@ Description:
 ====================================================================================
 */
 
-CREATE TABLE variety (
+CREATE TABLE IF NOT EXISTS variety (
     variety_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     entry VARCHAR(100) NOT NULL,
     pedigree VARCHAR(255),

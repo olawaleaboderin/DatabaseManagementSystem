@@ -31,7 +31,7 @@ SELECT DISTINCT crop, scientific_name
 FROM master_crop_table
 ORDER BY crop;
 
-CREATE TABLE crop (
+CREATE TABLE IF NOT EXISTS crop (
     crop_id INT AUTO_INCREMENT PRIMARY KEY,
     crop_name VARCHAR(50) NOT NULL,
     scientific_name VARCHAR(150) NOT NULL,

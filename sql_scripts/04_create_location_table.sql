@@ -30,7 +30,7 @@
 ------------------------------------------------------------------------ */
 
 # Create the Location Table
-CREATE TABLE location (
+CREATE TABLE IF NOT EXISTS location (
     location_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     country VARCHAR(50) NOT NULL,
     region VARCHAR(100) NOT NULL,

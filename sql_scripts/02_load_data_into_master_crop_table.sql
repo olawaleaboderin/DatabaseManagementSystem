@@ -22,15 +22,16 @@
        - LINES TERMINATED BY '\r\n' matches macOS line endings.
 
 ------------------------------------------------------------------------ */
+USE Crops_MET;
 
-LOAD DATA INFILE '/Users/mac/green_data_science/DMS_project/processed_data/master_crop_dataset.csv'
+LOAD DATA LOCAL INFILE './processed_data/master_crop_dataset.csv'
 INTO TABLE master_crop_table
 FIELDS TERMINATED BY ','
 OPTIONALLY ENCLOSED BY '"'
-LINES TERMINATED BY '\r\n'
+LINES TERMINATED BY '\n'
 IGNORE 1 LINES
 (
-    year,
+    `year`,
     country,
     region,
     agro_ecological_zone,
@@ -133,4 +134,3 @@ SET
     leaf_length = NULLIF(@leaf_length,'NA'),
     leaf_width = NULLIF(@leaf_width,'NA'),
     grain_covering = NULLIF(@grain_covering,'NA');
-

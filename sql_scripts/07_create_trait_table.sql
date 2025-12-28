@@ -26,7 +26,7 @@
 
 ------------------------------------------------------------------------ */
 
-CREATE TABLE trait (
+CREATE TABLE IF NOT EXISTS trait (
     trait_id INT AUTO_INCREMENT PRIMARY KEY,
     trait_name VARCHAR(100) NOT NULL UNIQUE,
     trait_description TEXT,
@@ -34,7 +34,7 @@ CREATE TABLE trait (
 );
 
 # Import the trait description from the official trait dictionary of breeding institutes
-LOAD DATA INFILE '/Users/mac/green_data_science/DMS_project/raw_data/trait_description.csv'
+LOAD DATA LOCAL INFILE '/Users/hannahnathanson/Library/CloudStorage/OneDrive-UniversidadedeLisboa/DMS_Group_Project/Project/raw_data/trait_description.csv'
 INTO TABLE trait
 FIELDS TERMINATED BY ',' 
 ENCLOSED BY '"' 

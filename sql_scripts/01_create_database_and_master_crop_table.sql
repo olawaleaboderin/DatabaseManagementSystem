@@ -21,15 +21,11 @@
 	-	Text columns that are critical identifiers (year, country, region, crop) are 
   		marked NOT NULL.
 ------------------------------------------------------------------------ */
-# Create database
-CREATE DATABASE Crops_MET;
-USE Crops_MET;
-
 
 # Create master crop table
 CREATE TABLE master_crop_table (
     id INT AUTO_INCREMENT PRIMARY KEY,
-    year INT NOT NULL,
+    `year` INT NOT NULL,
     country VARCHAR(50) NOT NULL,
     region VARCHAR(100) NOT NULL,
     agro_ecological_zone VARCHAR(100),

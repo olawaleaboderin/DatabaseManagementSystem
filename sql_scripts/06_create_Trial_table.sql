@@ -1,4 +1,4 @@
--/* -----------------------------------------------------------------------
+/* -----------------------------------------------------------------------
    Script: Create and Populate Trial Dimension Table
    Purpose:
        This script creates the 'trial' dimension table by organizing 
@@ -43,7 +43,7 @@
 
 ------------------------------------------------------------------------ */
 
-CREATE TABLE trial (
+CREATE TABLE IF NOT EXISTS trial (
     trial_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     location_id INT,
     crop_id INT,
